@@ -10,6 +10,8 @@ module PakyowApplication
     
     routes do
       default :ApplicationController, :index
+
+      post 'messages', :MessagesController, :create
     end
     
     middleware do
