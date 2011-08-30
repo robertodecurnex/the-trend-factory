@@ -11,6 +11,8 @@ module PakyowApplication
     routes do
       default :ApplicationController, :index
 
+      get 'messages', :MessagesController, :index
+
       post 'messages', :MessagesController, :create
     end
     

@@ -13,6 +13,12 @@ class Message
   # used
 
   @@latest_id = 0
+  
+  # Returns the stored collection of messages
+
+  def self.all
+    @@messages
+  end
 
   # Initialize the Message attributes given a 
   # hash of :attribute_name => :attribute_value 
@@ -33,4 +39,3 @@ class Message
   end
 
 end
-
