@@ -20,6 +20,13 @@ class Message
     @@messages
   end
 
+  # Given a Message id searches and returns 
+  # the targer instance.
+
+  def self.find(id)
+    @@messages.find { |message| message.id == id }
+  end
+
   # Initialize the Message attributes given a 
   # hash of :attribute_name => :attribute_value 
 
@@ -36,6 +43,15 @@ class Message
     @@latest_id += 1
     self.id = @@latest_id
     @@messages << self
+  end
+
+  # Updates the Message attributes given a
+  # hash of :attribute_name => :attribute_value
+
+  def update(params={})
+    params.each do |key, value|
+      self.send("#{key}=", value)
+    end
   end
 
 end
