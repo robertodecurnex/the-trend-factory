@@ -1,7 +1,7 @@
 class MessageBinder < Pakyow::Presenter::Binder
   
   # Target class to be bounded
-  binder_for :Message
+  binder_for :message
 
   def edit_link
     {:href => "/messages/edit/#{bindable.id}"}

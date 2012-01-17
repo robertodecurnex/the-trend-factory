@@ -20,7 +20,7 @@ class MessagesController
  
     # Redirect to the messages index after
     # the message creation
-    app.redirect_to('/messages')
+    app.redirect_to!('/messages')
   end
 
   def edit
@@ -46,7 +46,7 @@ class MessagesController
 
     message.update(request.params['message'])
      
-    app.redirect_to('/messages')
+    app.redirect_to!('/messages')
   end
 
 end
